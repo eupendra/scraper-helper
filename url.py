@@ -5,8 +5,6 @@ def change_param(url, param, new_value, create_new=False, upgrade_https=True):
     logging.info(f'Received {url}, {param}, {new_value}, {create_new}')
     try:
         from urllib.parse import parse_qsl, urlencode
-
-        # url = 'https://www.calcpa.org/customsearchproxy/?mpp=72&ajax=1&json=1&lpurl=%2Fmembers-directory&hawkvisitorid=9e033e99-d972-4559-8888-25918c77235d&callback=jQuery31108884423299105249_1583380756978&_=1583380756986'
         if url is None:
             return None
         elif '?' in url:
