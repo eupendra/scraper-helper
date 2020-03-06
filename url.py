@@ -34,3 +34,10 @@ def get_query_str_val(url, qs):
         q = url.split('?')[1]
         d = dict(parse_qsl(q))
         return d.get(qs)
+
+def strip_qs_params(url):
+    if not url:
+        raise ValueError("URL cannot be null")
+    from urllib.parse import urlparse
+    u = urlparse(url)
+    return f"{u.scheme}://{u.netloc}{u.path}"
