@@ -49,7 +49,7 @@ def SplitNames(param):
         return (first_name, last_name)
 
 
-def extract_email_list(s):
+def extract_emails(s):
     pattern = r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
     return re.findall(pattern, s)
     
