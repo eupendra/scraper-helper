@@ -20,8 +20,8 @@ def get_headers(s, sep=': ', strip_cookie=True, strip_cl=True, strip_headers: li
             else:
                 v = kv.split(sep)[1]
             # v = kv.split(sep)[1]
-            if strip_cookie and k == 'Cookie': continue
-            if strip_cl and k == 'Content-Length': continue
+            if strip_cookie and k.lower() == 'cookie': continue
+            if strip_cl and k.lower() == 'content-length': continue
             if k in strip_headers: continue
             d[k] = v
     return d
