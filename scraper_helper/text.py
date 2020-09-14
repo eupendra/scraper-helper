@@ -19,6 +19,8 @@ def get_headers(s, sep=': ', strip_cookie=True, strip_cl=True, strip_headers: li
                 v = ''
             else:
                 v = kv.split(sep)[1]
+            if v == '\'\'':
+                v =''
             # v = kv.split(sep)[1]
             if strip_cookie and k.lower() == 'cookie': continue
             if strip_cl and k.lower() == 'content-length': continue
