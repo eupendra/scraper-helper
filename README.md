@@ -1,5 +1,9 @@
-# Building and Deploying this as a package
+# Scraper Helper
 
-1. Clone the repo
-2. run ```python setup.py sdist bdist_wheel``` from this directory (Optional)
-3. run ```pip install -e <path to the package>``` to install this package
+This package contains many helper functions that can be used in web scraping projects. 
+
+## Installation
+Run the following to install:
+```python
+pip install scraper-helper
+```

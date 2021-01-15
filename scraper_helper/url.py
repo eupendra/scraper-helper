@@ -1,5 +1,5 @@
 
-def change_param(url, param, new_value, create_new=False, upgrade_https=True):
+def change_param(url, param, new_value, create_new=False, upgrade_https=False):
     try:
         from urllib.parse import parse_qsl, urlencode
 
