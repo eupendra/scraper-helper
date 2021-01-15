@@ -42,14 +42,14 @@ setup(
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: GNU GENERAL PUBLIC LICENSE',
         'Operating System :: Unix',
         'Operating System :: POSIX',
         'Operating System :: Microsoft :: Windows',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3 :: Only',
-        'Programming Language :: Python :: 3.6',
+        # 'Programming Language :: Python :: 3 :: Only',
+        # 'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
@@ -78,9 +78,9 @@ setup(
         #   'rst': ['docutils>=0.11'],
         #   ':python_version=="2.6"': ['argparse'],
     },
-    entry_points={
-        'console_scripts': [
-            'scraper-helper = scraper_helper.cli:main',
-        ]
-    },
+    # entry_points={
+    #     'console_scripts': [
+    #         'scraper-helper = scraper_helper.cli:main',
+    #     ]
+    # },
 )
