@@ -1,5 +1,9 @@
-from scraper_helper.address import get_zip, get_zip_canadian, split_address, split_address_canadian
-from scraper_helper.address import split_names, extract_emails
+from scraper_helper.address import extract_emails
+from scraper_helper.address import get_zip
+from scraper_helper.address import get_zip_canadian
+from scraper_helper.address import split_address
+from scraper_helper.address import split_address_canadian
+from scraper_helper.address import split_names
 
 
 def test_get_zip():

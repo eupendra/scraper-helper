@@ -1,4 +1,5 @@
-from scraper_helper.text import cleanup, get_dict
+from scraper_helper.text import cleanup
+from scraper_helper.text import get_dict
 
 
 def test_cleanup():

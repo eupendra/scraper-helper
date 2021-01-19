@@ -1,4 +1,7 @@
-from scraper_helper.url import change_param, get_query_str_val, strip_qs_params, get_root_address
+from scraper_helper.url import change_param
+from scraper_helper.url import get_query_str_val
+from scraper_helper.url import get_root_address
+from scraper_helper.url import strip_qs_params
 
 
 def test_change_param():
