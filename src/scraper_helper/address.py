@@ -14,16 +14,19 @@ def get_zip(address, country='US'):
     logging.debug(f'Extracting Zip from {address}')
     if country.upper() == 'CA':
         return get_zip_canadian(address)
+    if country.upper() not in ['CA', 'US']:
+        raise ValueError("Only US and CA are supported.")
     if address:
         result = re.search(r'[0-9]{5}(?:-[0-9]{4})?', address)
         if result:
             logging.debug(f'Got {result.group(0)}')
             return result.group(0)
         else:
-            logging.warning(f'No match found for {address}in {result}')
+            logging.warning(f'No ZIP found for {address}in {result}')
             return None
     else:
         logging.warning('No zip found in None string')
+        # Returning None instead of ValueError by design
         return None
 
 
@@ -108,7 +111,7 @@ def split_names(full_name):
             first_name = first_name.strip()
         return first_name, last_name
     else:
-        return None
+        return "", ""
 
 
 def extract_emails(s) -> list:

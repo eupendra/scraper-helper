@@ -4,32 +4,28 @@ from urllib.parse import urlparse
 
 
 def change_param(url, param, new_value, create_new=False, upgrade_https=False):
-    try:
-        if not url:
-            return None
-        elif "?" in url:
-            q = url.split("?")[1]
-            d = dict(parse_qsl(q))
-            d[f"{param}"] = new_value
+    if not url:
+        raise ValueError("URL cannot be null")
+    elif "?" in url:
+        q = url.split("?")[1]
+        d = dict(parse_qsl(q))
+        d[f"{param}"] = new_value
 
-            new_url = url.split("?")[0] + "?" + urlencode(d)
+        new_url = url.split("?")[0] + "?" + urlencode(d)
 
-        elif create_new:
-            return url + "?" + urlencode({param: new_value})
-        else:
-            return url
-        if upgrade_https:
-            return new_url.replace("http://", "https://")
-        else:
-            return new_url
-    except Exception as e:
-        print(f"Error in change param for {url}:\n{str(e)}")
+    elif create_new:
+        return url + "?" + urlencode({param: new_value})
+    else:
         return url
+    if upgrade_https:
+        return new_url.replace("http://", "https://")
+    else:
+        return new_url
 
 
 def get_query_str_val(url, qs):
-    if url is None:
-        return None
+    if not url:
+        raise ValueError("URL cannot be null")
     elif "?" in url:
         q = url.split("?")[1]
         d = dict(parse_qsl(q))
