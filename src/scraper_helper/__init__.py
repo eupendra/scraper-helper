@@ -1,12 +1,18 @@
-__version__ = '0.0.1'
+__version__ = '0.0.3'
 __all__ = [
-    'address', 'text', 'url','cleanup', 'get_dict', 'get_zip', 'SplitAddress', 'SplitNames', 'extract_emails',
-    'change_param','get_query_str_val','strip_qs_params','get_root_address'
-]
+    'change_param',
+    'get_query_str_val',
+    'strip_qs_params',
+    'get_root_address',
+    'get_zip',
+    'get_zip_canadian',
+    'split_address',
+    'split_address_canadian',
+    'split_names',
+    'extract_emails',
+    'html_decode']
 
-
-
-
-from .address import *
-from .text import *
-from .url import *
+from scraper_helper.address import get_zip, get_zip_canadian, split_address, split_address_canadian, split_names, \
+    extract_emails
+from scraper_helper.html import html_decode
+from scraper_helper.url import change_param, get_query_str_val, strip_qs_params, get_root_address

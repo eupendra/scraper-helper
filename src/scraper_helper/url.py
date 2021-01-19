@@ -17,8 +17,8 @@ def change_param(url, param, new_value, create_new=False, upgrade_https=False):
                 return new_url
         elif create_new:
             return url + "?" + urlencode({param: new_value})
-    except:
-        print(f"Error in change param for {url}")
+    except Exception as e:
+        print(f"Error in change param for {url}:\n{str(e)}")
         return url
 
 
@@ -49,4 +49,3 @@ def get_root_address(url):
 
     u = urlparse(url)
     return f"{u.scheme}://{u.netloc}"
-

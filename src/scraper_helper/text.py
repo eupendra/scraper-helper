@@ -10,9 +10,12 @@ def cleanup(s):
     else:
         return None
 
+
 """
 get_headers will be deprecated. Use ```get_dict``` instead
 """
+
+
 def get_headers(s, sep=': ', strip_cookie=True, strip_cl=True, strip_headers: list = []) -> dict():
     get_dict(s, sep, strip_cookie, strip_cl, strip_headers)
 

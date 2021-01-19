@@ -1,4 +1,4 @@
-from scraper_helper.html import *
+from scraper_helper.html import html_decode
 
 
 def test_html_decode():

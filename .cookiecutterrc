@@ -51,7 +51,7 @@ default_context:
     repo_hosting_domain:       'github.com'
     repo_name:                 'scraper-helper'
     repo_username:             'eupendra'
-    requiresio:                'yes'
+    requiresio:                'no'
     scrutinizer:               'no'
     setup_py_uses_setuptools_scm: 'no'
     setup_py_uses_test_runner: 'no'

@@ -23,8 +23,8 @@ def read(*names, **kwargs):
 
 setup(
     name='scraper-helper',
-    version='0.0.2',
-    license='MIT',
+    version='0.0.3',
+    license='GNU GENERAL PUBLIC LICENSE',
     description='Helper functions for web scraping',
     long_description='%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),

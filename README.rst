@@ -10,7 +10,7 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |appveyor| |requires|
+      - | |travis| |appveyor|
         | |codecov|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
@@ -26,10 +26,6 @@ Overview
 .. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/eupendra/scraper-helper?branch=master&svg=true
     :alt: AppVeyor Build Status
     :target: https://ci.appveyor.com/project/eupendra/scraper-helper
-
-.. |requires| image:: https://requires.io/github/eupendra/scraper-helper/requirements.svg?branch=master
-    :alt: Requirements Status
-    :target: https://requires.io/github/eupendra/scraper-helper/requirements/?branch=master
 
 .. |codecov| image:: https://codecov.io/gh/eupendra/scraper-helper/branch/master/graphs/badge.svg?branch=master
     :alt: Coverage Status
@@ -61,7 +57,7 @@ Overview
 
 Helper functions for web scraping
 
-* Free software: MIT license
+* Free software: GNU GENERAL PUBLIC LICENSE
 
 Installation
 ============
