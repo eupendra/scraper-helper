@@ -5,10 +5,9 @@ from .text import cleanup
 
 
 def get_zip(address, country='US'):
-    """
-
-    @param address:
-    @param country: Works only for US and CA. Defaults to US.
+    """ Accepts a US or CA address and extracts the zip code in it
+    @param address: Stribg
+    @param country: US or CA. Defaults to US
     @return: Zip Code string
     """
     logging.debug(f'Extracting Zip from {address}')
@@ -31,9 +30,9 @@ def get_zip(address, country='US'):
 
 
 def get_zip_canadian(address):
-    """
+    """ Accepts a canadian address and extracts the zip code in it
     @param address: Canadian Address
-    @return: Zip Codede
+    @return: Zip Code
     """
     logging.debug(f'Extracting Canadian Zip from {address}')
     if address:
@@ -50,12 +49,9 @@ def get_zip_canadian(address):
 
 
 def split_address(address) -> tuple:
-    """
-    @param address:
-    @return:
-    Splits address into US address into city, state, zip_code
-    param address like San Diego, CA 92129 or San Francisco, CA 94105-5829
-    Return City, State ZIP
+    """Splits US address into city, state, zip_code
+    @param address: like San Diego, CA 92129 or San Francisco, CA 94105-5829
+    @return: City, State ZIP
     """
     try:
         zip_code = get_zip(address)
@@ -71,10 +67,8 @@ def split_address(address) -> tuple:
 
 
 def split_address_canadian(address) -> tuple:
-    """
-    param address like 1776 Fourth Avenue, St. Catharines, Ontario L2R 6P9
-    Return Street, City, Province ZIP
-    @param address: Canadian Address
+    """Splits canadian address into street, city, province, zip_code
+    @param address: Canadian Address like 1776 Fourth Avenue, St. Catharines, Ontario L2R 6P9
     @return: street, city, province, zip_code
     """
     try:
@@ -92,12 +86,10 @@ def split_address_canadian(address) -> tuple:
 
 
 def split_names(full_name):
-    """
-    Splits full name into fist name and last name
+    """Splits full name into fist name and last name
     Can accept names like "Zijian Zhang , CPA, MSA, MSF" and "W Mills"
     @param full_name: Full name string
     @return: first_name, last_name
-
     """
     if full_name:
         name = cleanup(full_name)

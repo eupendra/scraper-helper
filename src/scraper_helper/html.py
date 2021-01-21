@@ -36,12 +36,10 @@ htmlCodes = (
 
 
 def html_decode(s: str) -> str:
-    """
-    Takes HTML encoded string and decodes it
+    """Takes an HTML encoded string and decodes it
     @param s: HTML encoded string
     @return: Decoded string
     """
-
     for code in htmlCodes:
         s = s.replace(code[0], code[1])
     return s
