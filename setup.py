@@ -23,7 +23,7 @@ def read(*names, **kwargs):
 
 setup(
     name='scraper-helper',
-    version='0.0.3',
+    version='0.0.4',
     license='GNU GENERAL PUBLIC LICENSE',
     description='Helper functions for web scraping',
     long_description='%s\n%s' % (
