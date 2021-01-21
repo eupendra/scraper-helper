@@ -34,6 +34,8 @@ def get_dict(s, sep=': ', strip_cookie=True, strip_cl=True, strip_headers: list 
             if v == '\'\'':
                 v = ''
             # v = kv.split(sep)[1]
+            if k[:1]==":":
+                continue
             if strip_cookie and k.lower() == 'cookie':
                 continue
             if strip_cl and k.lower() == 'content-length':
