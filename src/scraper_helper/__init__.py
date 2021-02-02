@@ -13,7 +13,7 @@ from scraper_helper.url import get_query_str_val
 from scraper_helper.url import get_root_address
 from scraper_helper.url import strip_qs_params
 
-__version__ = '0.0.4'
+__version__ = '0.0.5'
 __all__ = [
     'change_param',
     'get_query_str_val',
