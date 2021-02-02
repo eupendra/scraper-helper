@@ -9,7 +9,6 @@ def cleanup(s):
     if s:
         r = re.sub('(\r\n)(\t)', ' ', s).strip()
         r = ' '.join([x for x in r.split()])
-        print(f"Got ~{s}~ returning ~{r}~")
         return r
     else:
         return None
@@ -22,7 +21,7 @@ def get_headers(s: str, sep: str = ': ', strip_cookie: bool = True, strip_cl: bo
     return get_dict(s, sep, strip_cookie, strip_cl, strip_headers)
 
 
-def get_dict(s, sep=': ', strip_cookie=True, strip_cl=True, strip_headers: list = []) -> dict():
+def get_dict(s, sep=': ', strip_cookie=True, strip_cl=True, strip_headers: list = []) -> dict:
     """Takes headers copied from dev tools and converts to string. Note that this consider each line
     as new dictionary key. Thus pass input as string in triple quotes.
     Example Input:
@@ -51,8 +50,6 @@ def get_dict(s, sep=': ', strip_cookie=True, strip_cl=True, strip_headers: list 
                 v = ''
             else:
                 v = kv.split(sep)[1]
-            if v == '\'\'':
-                v = ''
             if k[:1] == ":":
                 continue
             if strip_cookie and k.lower() == 'cookie':

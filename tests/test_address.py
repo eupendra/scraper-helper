@@ -25,6 +25,16 @@ def test_get_zip_canadian():
     assert get_zip_canadian(address) == "L2R 6P9"
 
 
+def test_get_zip_canadian_none():
+    address = None
+    assert get_zip_canadian(address) is None
+
+
+def test_get_zip_canadian_no_results():
+    address = "xyz"
+    assert get_zip_canadian(address) is None
+
+
 def test_get_zip_with_country_ca():
     address = "1776 Fourth Avenue, St. Catharines, Ontario L2R 6P9"
     assert get_zip(address, country='CA') == "L2R 6P9"
