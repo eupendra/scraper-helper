@@ -2,6 +2,10 @@
 Changelog
 =========
 
+0.0.6 (2021-02-20)
+------------------
+
+* added new function headers which returns usual browser headers
 
 0.0.5 (2021-01-21)
 ------------------

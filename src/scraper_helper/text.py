@@ -60,3 +60,26 @@ def get_dict(s, sep=': ', strip_cookie=True, strip_cl=True, strip_headers: list 
                 continue
             d[k] = v
     return d
+
+
+def headers(browser="chrome"):
+    header_dictionary = {'accept': '*/*',
+                         'accept-encoding': 'gzip, deflate, br',
+                         'accept-language': 'en-US,en;q=0.9',
+                         'cache-control': 'no-cache',
+                         'pragma': 'no-cache',
+                         'referer': 'https://www.google.com/',
+                         'sec-ch-ua': '"Chromium";v="88", "Google Chrome";v="88", ";Not A Brand";v="99"',
+                         'sec-ch-ua-mobile': '?0',
+                         'sec-fetch-dest': 'empty',
+                         'sec-fetch-mode': 'cors',
+                         'sec-fetch-site': 'same-origin',
+                         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36'}
+
+    if browser.lower() == "chrome":
+        return header_dictionary
+    elif browser.lower() == "firefox":
+        header_dictionary['user-agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0'
+        return header_dictionary
+    else:
+        return header_dictionary

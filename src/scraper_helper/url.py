@@ -45,7 +45,7 @@ def get_query_str_val(url: str, qs: str) -> str:
 
 def strip_qs_params(url):
     """Takes a url and strips all query string parameters.
-    @param url: Any url like https://coderecode.com/scrapy-crash-course?src=yt
+    @param url: Any url like https://coderecode.com/scrapy-crash-course?src=git
     @return: full url without parameters: https://coderecode.com/scrapy-crash-course
     """
     if not url:
@@ -57,7 +57,7 @@ def strip_qs_params(url):
 
 def get_root_address(url):
     """Takes a url and strips returns the root url
-    @param url: Any url like https://coderecode.com/scrapy-crash-course?src=yt
+    @param url: Any url like https://coderecode.com/scrapy-crash-course?src=git
     @return: full url without parameters: https://coderecode.com/
     """
     if not url:
