@@ -13,6 +13,7 @@ from scraper_helper.url import change_param
 from scraper_helper.url import get_query_str_val
 from scraper_helper.url import get_root_address
 from scraper_helper.url import strip_qs_params
+from scraper_helper.scrapy import run_spider
 
 __version__ = '0.0.6'
 __all__ = [
@@ -30,4 +31,5 @@ __all__ = [
     'cleanup',
     'get_headers',
     'get_dict',
-    'headers']
+    'headers',
+    'run_spider']
