@@ -1,6 +1,21 @@
 import re
 
 
+def get_clean_currency(param, keep_comma=False, keep_period=True):
+    if not keep_comma and keep_period:
+        pattren = r'[\d.]*'
+    elif keep_comma and not keep_period:
+        pattren = r'[\d,]*'
+    else:
+        pattren = r'[\d,.]*'
+
+    result = re.search(pattren, param)
+    if result:
+        return result.group(0)
+    else:
+        return None
+
+
 def cleanup(s):
     """ Takes a string and cleans it by removing newline, tab and whitespace.
     @param s: Any string
