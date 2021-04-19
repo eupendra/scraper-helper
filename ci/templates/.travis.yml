@@ -18,9 +18,6 @@ matrix:
 {%- for env in tox_environments %}{{ '' }}
     - env:
         - TOXENV={{ env }},codecov
-{%- if env.startswith('pypy3') %}{{ '' }}
-        - TOXPYTHON=pypy3
-      python: 'pypy3'
 {%- elif env.startswith('pypy') %}{{ '' }}
       python: 'pypy'
 {%- else %}{{ '' }}

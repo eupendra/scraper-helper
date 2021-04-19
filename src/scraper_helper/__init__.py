@@ -5,6 +5,7 @@ from scraper_helper.address import split_address
 from scraper_helper.address import split_address_canadian
 from scraper_helper.address import split_names
 from scraper_helper.html import html_decode
+from scraper_helper.scrapy import run_spider
 from scraper_helper.text import cleanup
 from scraper_helper.text import get_dict
 from scraper_helper.text import get_headers
@@ -13,9 +14,8 @@ from scraper_helper.url import change_param
 from scraper_helper.url import get_query_str_val
 from scraper_helper.url import get_root_address
 from scraper_helper.url import strip_qs_params
-from scraper_helper.scrapy import run_spider
 
-__version__ = '0.0.6'
+__version__ = '0.0.7'
 __all__ = [
     'change_param',
     'get_query_str_val',

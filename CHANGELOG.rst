@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.0.7 (2021-04-19)
+------------------
+
+* added new function run_spider to run spider quickly
+
 0.0.6 (2021-02-20)
 ------------------
 
