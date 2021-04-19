@@ -24,6 +24,8 @@ def cleanup(s):
     if s:
         r = re.sub('(\r\n)(\t)', ' ', s).strip()
         r = ' '.join([x for x in r.split()])
+        if r:
+            r = r.replace('\xa0', ' ')  # &nbsp to space
         return r
     else:
         return None
